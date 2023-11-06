@@ -1,0 +1,35 @@
+[
+  {
+    "name": "Julian Beard",
+    "email": "julian.beard93@gmail.com",
+    "headshot": "/images/julian.png",
+    "title": "Lead Fullstack Engineer",
+    "specialization": "Backend Development, Software Architecture",
+    "bio": "Team lead, with a specialization in backend development and software architecture.",
+    "github": "https://github.com/badjab326",
+    "linkedin": "https://www.linkedin.com/in/julian-a-beard/",
+    "portfolio": "https://julianbeard.codes/"
+  },
+  {
+    "name": "Kammi Bobbitt",
+    "email": "kameronnb@gmail.com",
+    "headshot": "/images/kammi.png",
+    "title": "Lead UI/UX Developer",
+    "specialization": "Digital Art, Frontend Development",
+    "bio": "Southern California based developer with a history of strong communication, problem solving skills, teamwork, time management and a passion for learning how things work, as well as turning solid ideas into a finished product.",
+    "github": "https://github.com/lamekammi",
+    "linkedin": "https://www.linkedin.com/in/kammibobbitt/",
+    "portfolio": "https://knb-portfolio.netlify.app/"
+  },
+  {
+    "name": "Abgel Puente",
+    "email": "angel.l.puente@gmail.com",
+    "headshot": "/images/angel.jpeg",
+    "title": "Lead Frontend Engineer",
+    "specialization": "AI tools, CSS, Customer Relations",
+    "bio": "Lead Frontend Engineer, with a specialization in web deployment and CSS.",
+    "github": "https://github.com/ViceDG",
+    "linkedin": "https://www.linkedin.com/in/angel-puente0/",
+    "portfolio": "https://angel-puente.herokuapp.com/"
+  }
+]
