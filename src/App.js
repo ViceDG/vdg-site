@@ -27,10 +27,16 @@ function App() {
           <Contact />
         </Route>
         <Footer />
-        <iframe id="myVideo" src="https://streamable.com/e/5xmxw6?autoplay=1&nocontrols=1" frameborder="0" width="1920px" height="1080px" allowfullscreen allow="autoplay"></iframe>
-        {/* <video autoPlay muted loop id="myVideo">
-          <source src={background} type="video/mp4" />
-        </video> */}
+        <iframe
+          title="background"
+          id="myVideo"
+          src="https://streamable.com/e/ngaw1f?autoplay=1&nocontrols=1"
+          frameborder="0"
+          width="1920px"
+          height="1080px"
+          allowfullscreen
+          allow="autoplay"
+        ></iframe>
       </div>
     </div>
   );

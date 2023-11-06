@@ -5,18 +5,17 @@ import Modal from "react-modal";
 
 const About = () => {
   const [modalIsOpen, setIsOpen] = useState(false);
-  const [projectUrl, setProjectUrl] = useState("");
+  const [portfolioUrl, setPortfolioUrl] = useState("");
   let subtitle;
 
   Modal.setAppElement(document.getElementById("container"));
 
-  function openModal(newProjectUrl) {
-    setProjectUrl(newProjectUrl);
+  function openModal(newPortfolioUrl) {
+    setPortfolioUrl(newPortfolioUrl);
     setIsOpen(true);
   }
 
   function afterOpenModal() {
-    // references are now sync'd and can be accessed.
     subtitle.style.color = "#f00";
   }
 
@@ -26,7 +25,7 @@ const About = () => {
 
   const memberGrid = TeamData.map((member) => (
     <div className="item">
-      <h1 className="projName">{member.name}</h1>
+      <h1 className="memberName">{member.name}</h1>
       <h1>{member.title}</h1>
       <img
         onClick={() => openModal(member.portfolio)}
@@ -35,9 +34,11 @@ const About = () => {
         alt={member.name}
       />
       <br />
+      <br />
       <p className="description">{member.bio}</p>
       <p className="description">
-        <span className="techUsed">Specialization:</span> {member.specialization}
+        <span className="techUsed">Specialization:</span>{" "}
+        {member.specialization}
       </p>
       <a target="_blank" rel="noreferrer" href={member.github}>
         <img
@@ -50,7 +51,7 @@ const About = () => {
         <img
           className="icons"
           src="/images/webLogo.png"
-          alt="Live Site Link"
+          alt="Portfolio Link"
         ></img>
       </a>
     </div>
@@ -59,23 +60,23 @@ const About = () => {
   return (
     <div className="about">
       <div>{(() => true)()}</div>
-      <h1 className="name">About Us</h1>
+      <h1 className="name">ABOUT US</h1>
       <p className="bio">{AboutData.bio}</p>
       <br />
       <div className="projects">
-        <h1 className="name">Meet The Team</h1>
+        <h1 className="name">MEET THE TEAM</h1>
         <div className="container" id="container">
           {memberGrid}
           <Modal
             isOpen={modalIsOpen}
             onAfterOpen={afterOpenModal}
             onRequestClose={closeModal}
-            contentLabel="Project Demo"
+            contentLabel="Member Portfolio"
           >
             <iframe
               className="iframe"
-              src={projectUrl}
-              title="Project"
+              src={portfolioUrl}
+              title="Member Portfolio"
             ></iframe>
           </Modal>
         </div>

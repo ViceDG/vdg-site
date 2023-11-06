@@ -254,6 +254,12 @@ header {
   text-shadow: 0 0 10px gray;
 }
 
+.memberName {
+  font-size: 5vw;
+  text-shadow: 0 0 10px gray;
+  margin-bottom: -20px;
+}
+
 .projectPics {
   width: 35vw;
   border: 4px solid rgb(132, 0, 197);
@@ -282,9 +288,9 @@ header {
 
 .icons {
   width: 4vw;
-  background-color: rgb(132, 0, 197);
+  background-color: #fff;
   border-radius: 50%;
-  margin: 2px;
+  margin: 5px;
 }
 
 .icons:hover {
