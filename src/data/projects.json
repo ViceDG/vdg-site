@@ -1,11 +1,11 @@
 [
   {
-    "name": "What2Play",
-    "live": "https://what2play.netlify.app/",
-    "git": "https://github.com/badjab326/project-1",
-    "image": "/images/what2playSS.png",
-    "description": "A web app that gives users a randomized game suggestion based on the genre they're in the mood for!",
-    "tech": "JQuery, JavaScript, HTML, CSS"
+    "name": "D3fine",
+    "live": "https://www.d3fine.me/",
+    "git": "https://github.com/tetonkaa/d3fine",
+    "image": "/images/d3fineSS.png",
+    "description": "React app made to allow users to create personality assessments. Full CRUD / Firebase Authentication (mobile styling on the way!).",
+    "tech": "React.js, Node.js, Mongoose, MongoDB, Express.js, Google Firebase, JavaScript, HTML, CSS"
   },
   {
     "name": "Collarchive",
@@ -40,19 +40,19 @@
     "tech": "Angular, PayloadCMS, TypeScript, Mongoose, MongoDB, HTML, CSS"
   },
   {
-    "name": "D3fine",
-    "live": "https://www.d3fine.me/",
-    "git": "https://github.com/tetonkaa/d3fine",
-    "image": "/images/d3fineSS.png",
-    "description": "React app made to allow users to create personality assessments. Full CRUD / Firebase Authentication (mobile styling on the way!).",
-    "tech": "React.js, Node.js, Mongoose, MongoDB, Express.js, Google Firebase, JavaScript, HTML, CSS"
-  },
-  {
     "name": "SVGeezy",
     "live": "https://svgeezy-production.up.railway.app/dashboard",
     "git": "https://github.com/tetonkaa/svgeezy",
     "image": "/images/svgeezySS.png",
     "description": "A Scalable Vector Graphic (SVG) gallery created through an Angular Framework. The goal for this app is to amass a collection of SVG images with direct svg pathing for devs to use for their projects.",
     "tech": "Angular, TypeScript, HTML, CSS"
+  },
+  {
+    "name": "What2Play",
+    "live": "https://what2play.netlify.app/",
+    "git": "https://github.com/badjab326/project-1",
+    "image": "/images/what2playSS.png",
+    "description": "A web app that gives users a randomized game suggestion based on the genre they're in the mood for!",
+    "tech": "JQuery, JavaScript, HTML, CSS"
   }
 ]

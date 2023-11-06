@@ -81,7 +81,7 @@ const About = () => {
           </Modal>
         </div>
       </div>
-      <h1 className="name">Our Tech Stack</h1>
+      <h1 className="name">OUR TECH STACK</h1>
       <div className="techUsed">
         <img
           className="techIcon"
