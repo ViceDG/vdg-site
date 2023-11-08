@@ -21,6 +21,24 @@ header {
   fill: #181616;
 }
 
+.startButton {
+  background-color: #18161600;
+  height: 5vh;
+  width: 10vw;
+  font-family: "sui_generis";
+  border: solid;
+}
+
+.memberTitle {
+  color: black;
+  font-weight: bold;
+}
+.contactSvgs svg:hover {
+  height: 5vh;
+  fill: #ffffff;
+  transition: 0.3s;
+}
+
 .linkedin {
   height: 15vh !important;
 }
@@ -32,7 +50,8 @@ header {
 }
 .memberContainer {
   display: flex;
-  margin:auto;
+  margin: auto;
+  height: 75vh;
 }
 
 .contactSvgs {
@@ -156,9 +175,10 @@ header {
   min-height: 100vh;
   z-index: -100;
   filter: brightness(75%);
+
 }
 .homeContainer {
-  height: 87.5vh;
+ height: 87.2vh;
 }
 .about {
   padding-bottom: 30px;
@@ -169,12 +189,21 @@ header {
   -o-animation: fadein 2s;
   animation: fadein 2s;
   border-radius: 21px 31px 17px 19px;
--webkit-border-radius: 21px 31px 17px 19px;
--moz-border-radius: 21px 31px 17px 19px;
+  -webkit-border-radius: 21px 31px 17px 19px;
+  -moz-border-radius: 21px 31px 17px 19px;
   height: 100%;
-  background: rgb(49,48,61);
-background: linear-gradient(347deg, rgb(49, 48, 61) 31%, rgba(0, 0, 0, 0.845) 100%);
-background-size: cover;
+  background: rgb(49, 48, 61);
+  background: linear-gradient(
+    347deg,
+    rgb(49, 48, 61) 31%,
+    rgba(0, 0, 0, 0.845) 100%
+  );
+  background-size: cover;
+
+
+  box-shadow: 0px 10px 56px -6px rgba(0,0,0,0.84);
+-webkit-box-shadow: 0px 10px 56px -6px rgba(0,0,0,0.84);
+-moz-box-shadow: 0px 10px 56px -6px rgba(0,0,0,0.84);
 }
 
 @keyframes fadein {
@@ -255,8 +284,8 @@ background-size: cover;
 }
 
 .bio {
-  width: 50vw;
-  font-size: 1.1vw;
+  width: 50%;
+  font-size: 1.1em;
   margin: 0 auto;
   padding: 20px;
   border-radius: 25px;
@@ -265,6 +294,7 @@ background-size: cover;
 .techIcon {
   max-width: 5vw;
   padding: 2px;
+  max-height: 10vh;
 }
 
 .techIcon:hover {
@@ -303,10 +333,13 @@ background-size: cover;
 }
 
 .container {
-  display: grid;
+  /* display: grid;
   grid-template-columns: 50% 50%;
   grid-gap: 10px;
-  grid-auto-flow: row;
+  grid-auto-flow: row; */
+  display: flex;
+  flex-direction: row;
+  padding: 10px
 }
 
 .projName {
@@ -344,12 +377,15 @@ background-size: cover;
 .techUsed {
   font-weight: bolder;
   color: rgb(132, 0, 197);
-  border: dotted red;
+}
+
+.aboutTech {
   display: flex;
-  height: 50vh;
+  height: 40vh;
   flex-direction: row;
   justify-content: center;
-  align-items: flex-start
+  flex-wrap: wrap;
+  
 }
 
 .icons {
@@ -507,7 +543,7 @@ background-size: cover;
   }
 
   .bio {
-    width: 80vw;
+    width: 70vw;
     font-size: 12px;
   }
 

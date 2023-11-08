@@ -25,42 +25,42 @@ const About = () => {
 
   const memberGrid = TeamData.map((member) => (
     <div className="memberContainer">
-    <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-      <a href="#">
-        <img
-          onClick={() => openModal(member.portfolio)}
-          class="rounded-t-lg"
-          src={member.headshot}
-          alt={member.name}
-        />
-      </a>
-      <div class="p-5">
-        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-          {member.name}
-        </h5>
+      <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+        <a href="#">
+          <img
+            onClick={() => openModal(member.portfolio)}
+            class="rounded-t-lg"
+            src={member.headshot}
+            alt={member.name}
+          />
+        </a>
+        <div class="p-5">
+          <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+            {member.name}
+          </h5>
 
-        <h1>{member.title}</h1>
-        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
-          {member.bio}
-        </p>
-        <div className="bioLinks">
-        <a target="_blank" rel="noreferrer" href={member.github}>
-          <img
-            className="icons"
-            src="/images/githubLogoMini.png"
-            alt="GitHub Link"
-          ></img>
-        </a>
-        <a target="_blank" rel="noreferrer" href={member.portfolio}>
-          <img
-            className="icons"
-            src="/images/webLogo.png"
-            alt="Portfolio Link"
-          ></img>
-        </a>
+          <h1 className="memberTitle">{member.title}</h1>
+          <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+            {member.bio}
+          </p>
+          <div className="bioLinks">
+            <a target="_blank" rel="noreferrer" href={member.github}>
+              <img
+                className="icons"
+                src="/images/githubLogoMini.png"
+                alt="GitHub Link"
+              ></img>
+            </a>
+            <a target="_blank" rel="noreferrer" href={member.portfolio}>
+              <img
+                className="icons"
+                src="/images/webLogo.png"
+                alt="Portfolio Link"
+              ></img>
+            </a>
+          </div>
         </div>
       </div>
-    </div>
     </div>
   ));
 
@@ -89,7 +89,7 @@ const About = () => {
         </div>
       </div>
       <h1 className="name">OUR TECH STACK</h1>
-      <div className="techUsed">
+      <div className="aboutTech">
         <img
           className="techIcon"
           src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg"

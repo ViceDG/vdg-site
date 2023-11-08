@@ -1,18 +1,20 @@
 .App {
   text-align: center;
   z-index: 1;
-  height: 100%;
   background: rgb(49, 48, 61);
   background: linear-gradient(
     347deg,
-    rgba(49, 48, 61, 0.883) 31%,
-    rgba(227, 130, 130, 0.592) 100%
+    rgb(49, 48, 61) 31%,
+    rgba(227, 130, 130, 0.772) 100%
   );
-  background-size: cover;
+  background-size: 100%;
 }
 
+
+
+
 .bgdarken {
-  margin: 0% 15%;
+  margin: 0% 10%;
 }
 
 .App-logo {
@@ -35,6 +37,7 @@
 .main-logo {
   margin: auto;
   height: 45vh;
+  margin-bottom: -20px;
 }
 
 nav {
