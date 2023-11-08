@@ -6,10 +6,57 @@ body {
   color: white;
 }
 
+@font-face {
+  font-family: "sui_generis";
+  src: url(../public/font/sui_generis_rg-webfont.woff2);
+}
 header {
   padding-top: 1px;
   padding-bottom: 1px;
   width: 100vw;
+}
+
+.contactSvgs svg {
+  height: 5vh;
+  fill: #181616;
+}
+
+.linkedin {
+  height: 15vh !important;
+}
+
+.bioLinks {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.memberContainer {
+  display: flex;
+  margin:auto;
+}
+
+.contactSvgs {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  width: 8vw;
+  height: 20vh;
+  justify-content: space-evenly;
+  bottom: 35vh;
+  right: 90vw;
+
+  position: absolute;
+}
+.mainContent {
+}
+
+.mainContent p {
+  color: rgb(255, 255, 255);
+}
+
+.mainContent h1 {
+  font-size: 3em;
+  font-family: "sui_generis";
 }
 
 .nav {
@@ -110,9 +157,10 @@ header {
   z-index: -100;
   filter: brightness(75%);
 }
-
+.homeContainer {
+  height: 87.5vh;
+}
 .about {
-  width: 100vw;
   padding-bottom: 30px;
   padding-top: 5px;
   -webkit-animation: fadein 2s;
@@ -120,6 +168,13 @@ header {
   -ms-animation: fadein 2s;
   -o-animation: fadein 2s;
   animation: fadein 2s;
+  border-radius: 21px 31px 17px 19px;
+-webkit-border-radius: 21px 31px 17px 19px;
+-moz-border-radius: 21px 31px 17px 19px;
+  height: 100%;
+  background: rgb(49,48,61);
+background: linear-gradient(347deg, rgb(49, 48, 61) 31%, rgba(0, 0, 0, 0.845) 100%);
+background-size: cover;
 }
 
 @keyframes fadein {
@@ -185,16 +240,21 @@ header {
 }
 
 .name {
-  font-size: 8vw;
+  font-size: 6vw;
   font-weight: bolder;
-  text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #ad00e6,
-    0 0 50px #9200e6;
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 10px #e6007389,
+    0 0 12px #ad00e689, 0 0 10px #9200e67e;
   margin-top: 10px;
   margin-bottom: 10px;
+  text-align: center !important;
+  width: 60vw;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  font-family: "sui_generis";
 }
 
 .bio {
-  background-color: rgb(0, 0, 0, 0.6);
   width: 50vw;
   font-size: 1.1vw;
   margin: 0 auto;
@@ -284,6 +344,12 @@ header {
 .techUsed {
   font-weight: bolder;
   color: rgb(132, 0, 197);
+  border: dotted red;
+  display: flex;
+  height: 50vh;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start
 }
 
 .icons {
@@ -401,6 +467,21 @@ header {
   transition: all 200ms;
 }
 
+.contentBackground {
+  background: rgb(49, 48, 61);
+  background: linear-gradient(
+    347deg,
+    rgba(49, 48, 61, 0.895) 31%,
+    rgb(215, 118, 215) 100%
+  );
+  background-size: cover;
+  border-radius: 4px;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}
+
 @media screen and (max-width: 768px) {
   .button-75 {
     font-size: 11px;
@@ -413,7 +494,7 @@ header {
   }
 
   .about {
-    padding-top: 20px;
+    padding-top: 5%;
   }
 
   .main-logo {

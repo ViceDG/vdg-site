@@ -24,36 +24,43 @@ const About = () => {
   }
 
   const memberGrid = TeamData.map((member) => (
-    <div className="item">
-      <h1 className="memberName">{member.name}</h1>
-      <h1>{member.title}</h1>
-      <img
-        onClick={() => openModal(member.portfolio)}
-        className="headshot"
-        src={member.headshot}
-        alt={member.name}
-      />
-      <br />
-      <br />
-      <p className="description">{member.bio}</p>
-      <p className="description">
-        <span className="techUsed">Specialization:</span>{" "}
-        {member.specialization}
-      </p>
-      <a target="_blank" rel="noreferrer" href={member.github}>
+    <div className="memberContainer">
+    <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+      <a href="#">
         <img
-          className="icons"
-          src="/images/githubLogoMini.png"
-          alt="GitHub Link"
-        ></img>
+          onClick={() => openModal(member.portfolio)}
+          class="rounded-t-lg"
+          src={member.headshot}
+          alt={member.name}
+        />
       </a>
-      <a target="_blank" rel="noreferrer" href={member.portfolio}>
-        <img
-          className="icons"
-          src="/images/webLogo.png"
-          alt="Portfolio Link"
-        ></img>
-      </a>
+      <div class="p-5">
+        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+          {member.name}
+        </h5>
+
+        <h1>{member.title}</h1>
+        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+          {member.bio}
+        </p>
+        <div className="bioLinks">
+        <a target="_blank" rel="noreferrer" href={member.github}>
+          <img
+            className="icons"
+            src="/images/githubLogoMini.png"
+            alt="GitHub Link"
+          ></img>
+        </a>
+        <a target="_blank" rel="noreferrer" href={member.portfolio}>
+          <img
+            className="icons"
+            src="/images/webLogo.png"
+            alt="Portfolio Link"
+          ></img>
+        </a>
+        </div>
+      </div>
+    </div>
     </div>
   ));
 

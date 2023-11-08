@@ -1,5 +1,18 @@
 .App {
   text-align: center;
+  z-index: 1;
+  height: 100%;
+  background: rgb(49, 48, 61);
+  background: linear-gradient(
+    347deg,
+    rgba(49, 48, 61, 0.883) 31%,
+    rgba(227, 130, 130, 0.592) 100%
+  );
+  background-size: cover;
+}
+
+.bgdarken {
+  margin: 0% 15%;
 }
 
 .App-logo {
@@ -7,12 +20,31 @@
   pointer-events: none;
 }
 
+.buzz {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-top: 5vh;
+  font-size: 1rem;
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
 }
+.main-logo {
+  margin: auto;
+  height: 45vh;
+}
 
+nav {
+  background-color: rgba(255, 0, 0, 0) !important;
+  color: white !important;
+}
+
+nav li {
+  color: white !important;
+}
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
