@@ -28,19 +28,18 @@ const Projects = () => {
 
   const projectGrid = ProjectsData.map((project) => (
     <div className="item">
-      <h1 className="projName">{project.name}</h1>
-      <img
-        onClick={() => openModal(project.live)}
-        className="projectPics"
-        src={project.image}
-        alt={project.name}
-      />
-      <br />
-      <p className="description">{project.description}</p>
-      <p className="description">
-        <span className="techUsed">Tech Used:</span> {project.tech}
-      </p>
-      <a target="_blank" rel="noreferrer" href={project.git}>
+      <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+    <a href="#">
+        <img onClick={() => openModal(project.live)} class="rounded-t-lg" src={project.image}
+        alt={project.name} />
+    </a>
+    <div class="p-5">
+        <a href="#">
+            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{project.name}</h5>
+        </a>
+        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">{project.description}</p>
+        <div className="projLinks">
+        <a target="_blank" rel="noreferrer" href={project.git}>
         <img
           className="icons"
           src="/images/githubLogoMini.png"
@@ -54,13 +53,17 @@ const Projects = () => {
           alt="Live Site Link"
         ></img>
       </a>
+      </div>
+    </div>
+</div>
+
     </div>
   ));
 
   return (
     <div className="projects">
       <h1 className="projTitle">PROJECTS</h1>
-      <div>
+      <div className="projectsCardsContainer">
         {projectGrid}
         <Modal
           isOpen={modalIsOpen}

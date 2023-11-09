@@ -206,9 +206,13 @@ header {
 
 .item {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
-  border: dotted red;
+  width: 20vw;
+  height: 65vh;
+  margin-top: 30px;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 @keyframes fadein {
@@ -320,7 +324,6 @@ header {
 .projects {
   display: flex;
   flex-direction: column;
-  margin: 0 auto;
   max-width: 90vw;
   -webkit-animation: fadein 2s;
   -moz-animation: fadein 2s;
@@ -343,20 +346,47 @@ header {
 }
 
 .projTitle {
+  font-size: 6vw;
+  font-weight: bolder;
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 10px #e6007389,
+    0 0 12px #ad00e689, 0 0 10px #9200e67e;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: center !important;
+  width: 60vw;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  font-family: "sui_generis";
+}
+
+.projLinks{
+  width: 50%;
+  margin: auto;
+  padding-top: 25%;
+  display: flex;
+  flex-direction: row;
+}
+
+.navLinks{
   color: white;
-  font-size: 8vw;
-  padding: 0;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #ad00e6,
-    0 0 50px #9200e6;
+}
+
+.navLinks:hover{
+  color: rgba(6, 6, 6, 0.767) !important;
+  transition: .2s
+}
+
+
+.projectsCardsContainer{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
 }
 
 .container {
-  /* display: grid;
-  grid-template-columns: 50% 50%;
-  grid-gap: 10px;
-  grid-auto-flow: row; */
   display: flex;
   flex-direction: row;
   padding: 10px;
@@ -412,7 +442,7 @@ header {
   width: 4vw;
   background-color: #fff;
   border-radius: 50%;
-  margin: auto;
+  margin: auto !important;
 }
 
 .icons:hover {
@@ -442,7 +472,8 @@ header {
   padding: 10px !important;
   padding-right: 13px !important;
   padding-bottom: 12px !important;
-  background-color: rgba(255, 0, 208, 0.75) !important;
+  background-color: rgb(255, 255, 255) !important;
+  outline: none;
   width: 80% !important;
   height: 80% !important;
   margin: 0 auto;
@@ -546,7 +577,7 @@ select:focus {
 .contactFormContainer textarea:focus {
   outline: none;
   box-shadow: none;
-  border-bottom: #e60073 solid; /* Adjust the border color as needed */
+  border-bottom: #f83c68 solid;
   transition: 0.3s;
   outline-color: transparent;
   color: white !important;
