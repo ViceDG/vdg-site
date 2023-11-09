@@ -60,7 +60,7 @@ const Projects = () => {
   return (
     <div className="projects">
       <h1 className="projTitle">PROJECTS</h1>
-      <div className="container" id="container">
+      <div>
         {projectGrid}
         <Modal
           isOpen={modalIsOpen}

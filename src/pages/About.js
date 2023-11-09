@@ -70,7 +70,7 @@ const About = () => {
       <h1 className="name">ABOUT US</h1>
       <p className="bio">{AboutData.bio}</p>
       <br />
-      <div className="projects">
+      <div className="">
         <h1 className="name">MEET THE TEAM</h1>
         <div className="container" id="container">
           {memberGrid}
