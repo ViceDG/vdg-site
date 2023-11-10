@@ -37,7 +37,6 @@ function App() {
           allowfullscreen
           allow="autoplay"
         ></iframe>
-
       </div>
     </div>
   );

@@ -5,13 +5,11 @@ const Home = (props) => {
     <div className="homeContainer">
       <img className="main-logo" src={AboutData.logo} alt="Main Logo" />
       <div className="mainContent">
-        <div className="buzz">
-          <h1>FAST</h1>
-          <h1>Efficient</h1>
-          <h1>Forward</h1>
-        </div>
+        <h1 className="buzz"><i>FAST EFFICIENT RELIABLE</i></h1>
         <p className="bio">{AboutData.bio}</p>
-        <a href="/contact"><button className="startButton">Get Started</button></a>
+        <a href="/contact">
+          <button className="startButton">Get Started</button>
+        </a>
         <br />
       </div>
     </div>
