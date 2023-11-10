@@ -55,12 +55,13 @@ header {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  padding-bottom: 10px;
 }
 
 .memberContainer {
   display: flex;
   margin: auto;
-  height: 75vh;
+  height: 100%;
 }
 
 .contactSvgs {
@@ -72,7 +73,6 @@ header {
   justify-content: space-evenly;
   bottom: 35vh;
   right: 90vw;
-
   position: absolute;
 }
 
@@ -304,9 +304,6 @@ header {
   font-weight: bolder;
   text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 10px #e6007389,
     0 0 12px #ad00e689, 0 0 10px #9200e67e;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  text-align: center !important;
   width: 60vw;
   display: flex;
   flex-direction: column;
@@ -322,10 +319,19 @@ header {
   border-radius: 25px;
 }
 
+.techText {
+  display: flex;
+  flex-direction: column;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-bottom: 20px;
+  margin-bottom: 0;
+  align-items: center;
+}
+
 .techIcon {
-  max-width: 5vw;
-  padding: 2px;
-  max-height: 10vh;
+  width: 8vw;
+  padding: 5px;
 }
 
 .techIcon:hover {
@@ -372,13 +378,7 @@ header {
   font-weight: bolder;
   text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 10px #e6007389,
     0 0 12px #ad00e689, 0 0 10px #9200e67e;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  text-align: center !important;
-  width: 60vw;
-  display: flex;
-  flex-direction: column;
-  margin: auto;
+  margin: 20px auto 0px auto;
   font-family: "sui_generis";
 }
 
@@ -453,15 +453,15 @@ header {
 
 .aboutTech {
   display: flex;
-  height: 40vh;
   flex-direction: row;
-  justify-content: center;
   flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: center;
+  margin: 20px 40px;
 }
 
 .icons {
   width: 4vw;
-  background-color: #fff;
   border-radius: 50%;
   margin: auto !important;
 }
@@ -723,9 +723,34 @@ footer {
     font-size: 12px;
   }
 
+  .techUsed {
+    font-weight: bolder;
+    font-size: 15px;
+    text-decoration: underline;
+    color: white;
+    margin-top: 0px;
+    margin-bottom: -5px;
+  }
+
+  .techLinks {
+    font-weight: bolder;
+    font-size: 15px;
+    text-decoration: underline;
+    color: white;
+    margin-bottom: 10px;
+  }
+
   .techIcon {
-    max-width: 8vw;
-    padding: 2px;
+    width: 10vw;
+    padding: 5px;
+  }
+
+  .techText {
+    font-size: 3vw;
+  }
+
+  .about {
+    margin: 10px;
   }
 
   .container {
@@ -753,7 +778,6 @@ footer {
 
   .icons {
     width: 9vw;
-    background-color: rgb(132, 0, 197);
     border-radius: 50%;
     margin: 2px;
   }
