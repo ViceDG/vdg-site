@@ -73,7 +73,6 @@ const Contact = (props) => {
       <div className="about">
         <div className="mb-5 mt-3 pt-md-3">
           <h1 className="projTitle">CONTACT US</h1>
-          <hr className="my-4 ml-0 text-left" />
         </div>
         <p>{contactConfig.description}</p>
         <br />
@@ -135,7 +134,7 @@ const Contact = (props) => {
             ></textarea>
             <div>
               <div className="form-group">
-                <button className="btn ac_btn" type="submit">
+                <button className="startButton" type="submit">
                   {formData.loading ? "Sending..." : "Send"}
                 </button>
               </div>

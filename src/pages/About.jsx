@@ -44,23 +44,20 @@ const About = () => {
   }
 
   const memberGrid = TeamData.map((member) => (
-    <div className="memberContainer">
-      <div class="max-w-sm mt-5 bg-white rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-        <a href="#">
+    <div className="projectCard">
+      <div class="bg-white rounded-xl">
           <img
             onClick={() => openModal(member.portfolio)}
-            class="rounded-t-lg"
+            class="projectPics"
             src={member.headshot}
             alt={member.name}
           />
-        </a>
-        <div class="p-5">
           <h5 class="mb-0 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
             {member.name}
           </h5>
 
           <h1 className="memberTitle mb-2">{member.title}</h1>
-          <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+          <p class="mb-3 mx-3 font-normal text-gray-700 dark:text-gray-400">
             {member.bio}
           </p>
           <div className="bioLinks">
@@ -81,7 +78,6 @@ const About = () => {
           </div>
         </div>
       </div>
-    </div>
   ));
 
   return (
@@ -93,7 +89,7 @@ const About = () => {
       </div>
       <div className="about">
         <h1 className="projTitle">MEET THE TEAM</h1>
-        <div className="container" id="container">
+        <div className="memContainer" id="container">
           {memberGrid}
           <Modal
             isOpen={modalIsOpen}

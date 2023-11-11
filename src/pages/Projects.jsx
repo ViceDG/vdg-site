@@ -27,18 +27,17 @@ const Projects = () => {
   // Define function to return JSX needed upon data retrieval
 
   const projectGrid = ProjectsData.map((project) => (
-    <div className="item">
-      <div class="max-w-sm bg-white border-solid border-2 border-gray-400 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-          <img
-            onClick={() => openModal(project.live)}
-            class="rounded-t-lg border-solid border-2 border-gray-400"
-            src={project.image}
-            alt={project.name}
-          />
-        <div class="p-5">
-            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-              {project.name}
-            </h5>
+    <div className="projectCard">
+      <div class="bg-white rounded-xl">
+        <img
+          onClick={() => openModal(project.live)}
+          className="projectPics"
+          src={project.image}
+          alt={project.name}
+        />
+          <h5 class="mb-0 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+            {project.name}
+          </h5>
           <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
             {project.description}
           </p>
@@ -60,13 +59,12 @@ const Projects = () => {
           </div>
         </div>
       </div>
-    </div>
   ));
 
   return (
     <div className="about">
       <h1 className="projTitle">PROJECTS</h1>
-      <div className="projectsCardsContainer">
+      <div className="memContainer">
         {projectGrid}
         <Modal
           isOpen={modalIsOpen}
