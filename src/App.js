@@ -31,10 +31,10 @@ function App() {
           title="background"
           id="myVideo"
           src="https://streamable.com/e/ngaw1f?autoplay=1&nocontrols=1"
-          frameborder="0"
+          frameBorder="0"
           width="1920px"
           height="1080px"
-          allowfullscreen
+          allowFullScreen
           allow="autoplay"
         ></iframe>
       </div>

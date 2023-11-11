@@ -28,37 +28,37 @@ const Projects = () => {
 
   const projectGrid = ProjectsData.map((project) => (
     <div className="projectCard">
-      <div class="bg-white rounded-xl">
+      <div className="bg-white rounded-xl">
         <img
           onClick={() => openModal(project.live)}
           className="projectPics"
           src={project.image}
           alt={project.name}
         />
-          <h5 class="mb-0 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-            {project.name}
-          </h5>
-          <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
-            {project.description}
-          </p>
-          <div className="bioLinks">
-            <a target="_blank" rel="noreferrer" href={project.git}>
-              <img
-                className="icons"
-                src="/images/githubLogoMini.png"
-                alt="GitHub Link"
-              ></img>
-            </a>
-            <a target="_blank" rel="noreferrer" href={project.live}>
-              <img
-                className="icons"
-                src="/images/webLogo.png"
-                alt="Live Site Link"
-              ></img>
-            </a>
-          </div>
+        <h5 className="mb-0 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+          {project.name}
+        </h5>
+        <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
+          {project.description}
+        </p>
+        <div className="bioLinks">
+          <a target="_blank" rel="noreferrer" href={project.git}>
+            <img
+              className="icons"
+              src="/images/githubLogoMini.png"
+              alt="GitHub Link"
+            ></img>
+          </a>
+          <a target="_blank" rel="noreferrer" href={project.live}>
+            <img
+              className="icons"
+              src="/images/webLogo.png"
+              alt="Live Site Link"
+            ></img>
+          </a>
         </div>
       </div>
+    </div>
   ));
 
   return (

@@ -90,7 +90,7 @@ const Contact = (props) => {
           <form onSubmit={handleSubmit} className="">
             <div className="formFields">
               <input
-                class="nameInput"
+                className="nameInput"
                 id=""
                 name="name"
                 placeholder="Name"
@@ -101,7 +101,7 @@ const Contact = (props) => {
               />
               <br />
               <input
-                class="emailInput"
+                className="emailInput"
                 id=""
                 name="email"
                 placeholder="Email"
@@ -112,7 +112,7 @@ const Contact = (props) => {
               />
               <br />
               <input
-                class="nameInput"
+                className="nameInput"
                 id=""
                 name="budget"
                 placeholder="Budget"
@@ -123,7 +123,7 @@ const Contact = (props) => {
               />
             </div>
             <textarea
-              class="messageInput"
+              className="messageInput"
               placeholder="Summary of your project..."
               id=""
               name="message"
