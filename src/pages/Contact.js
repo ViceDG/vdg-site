@@ -1,26 +1,21 @@
 import React, { useState } from "react";
 import * as emailjs from "emailjs-com";
 
-// import { Helmet, HelmetProvider } from "react-helmet-async";
-
-// import { div, div, div, Alert } from "tailwindcss";
-
 const Contact = (props) => {
   const contactConfig = {
-    YOUR_EMAIL: "ViceDevGroup@Gmail.com",
+    USER_EMAIL: "ViceDevGroup@Gmail.com",
     description:
-      "Need an application or website to be built? Write to us and we'll get back as soon as possible",
-    // creat an emailjs.com account
-    // check out this tutorial https://www.emailjs.com/docs/examples/reactjs/
-    YOUR_SERVICE_ID: "need2add",
-    YOUR_TEMPLATE_ID: process.env.YOUR_TEMPLATE_ID,
-    YOUR_USER_ID: process.env.YOUR_USER_ID,
+      "Need an app or website built? Write to us and we'll get back to you as soon as possible!",
+    SERVICE_ID: process.env.REACT_APP_SERVICE_ID,
+    TEMPLATE_ID: process.env.REACT_APP_TEMPLATE_ID,
+    USER_ID: process.env.REACT_APP_USER_ID,
   };
 
   const [formData, setFormdata] = useState({
     email: "",
     name: "",
     message: "",
+    budget: "",
     loading: false,
     show: false,
     alertmessage: "",
@@ -30,27 +25,26 @@ const Contact = (props) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setFormdata({ loading: true });
-
     const templateParams = {
       from_name: formData.email,
       user_name: formData.name,
-      to_name: contactConfig.YOUR_EMAIL,
-      message: formData.message,
+      to_name: contactConfig.USER_EMAIL,
+      message: formData.message + " $" + formData.budget,
     };
 
     emailjs
       .send(
-        contactConfig.YOUR_SERVICE_ID,
-        contactConfig.YOUR_TEMPLATE_ID,
+        contactConfig.SERVICE_ID,
+        contactConfig.TEMPLATE_ID,
         templateParams,
-        contactConfig.YOUR_USER_ID
+        contactConfig.USER_ID
       )
       .then(
         (result) => {
           console.log(result.text);
           setFormdata({
             loading: false,
-            alertmessage: "SUCCESS! , Looking forward to reading your email.",
+            alertmessage: "SUCCESS! Looking forward to reading your email.",
             variant: "success",
             show: true,
           });
@@ -75,83 +69,72 @@ const Contact = (props) => {
   };
 
   return (
-    // <HelmetProvider>
     <div className="contact">
-      {/* <Helmet>
-          <meta charSet="utf-8" />
-          <title>{meta.title} | Contact</title>
-          <meta name="description" content="test" />
-        </Helmet> */}
-      <div className="mb-5 mt-3 pt-md-3">
-        <div lg="8">
-          <h1 className="display-4 mb-4">Contact</h1>
-          <hr className="t_border my-4 ml-0 text-left" />
+      <div className="about">
+        <div className="mb-5 mt-3 pt-md-3">
+          <h1 className="projTitle">CONTACT US</h1>
+          <hr className="my-4 ml-0 text-left" />
         </div>
-      </div>
-      <div className="sec_sp">
-        <div lg="12">
-          {/* <Alert
-              //show={formData.show}
-              variant={formData.variant}
-              className={`rounded-0 co_alert ${
-                formData.show ? "d-block" : "d-none"
-              }`}
-              onClose={() => setFormdata({ show: false })}
-              dismissible
-            >
-              <p className="my-0">{formData.alertmessage}</p>
-            </Alert> */}
-        </div>
-        <div lg="5" className="mb-5">
-          <h3 className="divor_sec py-4">Get in touch</h3>
-          <address>
-            <strong>Email:</strong>{" "}
-            <a href={`mailto:${contactConfig.YOUR_EMAIL}`}>
-              {contactConfig.YOUR_EMAIL}
-            </a>
-            <br />
-          </address>
-          <p>{contactConfig.description}</p>
-        </div>
-        <div lg="7" className="contactFormContainer">
+        <p>{contactConfig.description}</p>
+        <br />
+        <p>
+          <strong>Email us at:</strong>{" "}
+          <a href={`mailto:${contactConfig.USER_EMAIL}`}>
+            {contactConfig.USER_EMAIL}
+          </a>
+        </p>
+        <p>
+          <br />
+          <strong>Or:</strong> Fill out the contact form below!
+        </p>
+        <div className="contactFormContainer">
           <form onSubmit={handleSubmit} className="">
-            <div>
-              <div lg="6" className="">
-                <input
-                  class="nameInput"
-                  id=""
-                  name="name"
-                  placeholder="Name"
-                  value={formData.name || ""}
-                  type="text"
-                  required
-                  onChange={handleChange}
-                />
-              </div>
-              <div lg="6" className="">
-                <input
-                  class="emailInput"
-                  id=""
-                  name="email"
-                  placeholder="Email"
-                  type="email"
-                  value={formData.email || ""}
-                  required
-                  onChange={handleChange}
-                />
-              </div>
+            <div className="formFields">
+              <input
+                class="nameInput"
+                id=""
+                name="name"
+                placeholder="Name"
+                value={formData.name || ""}
+                type="text"
+                required
+                onChange={handleChange}
+              />
+              <br />
+              <input
+                class="emailInput"
+                id=""
+                name="email"
+                placeholder="Email"
+                type="email"
+                value={formData.email || ""}
+                required
+                onChange={handleChange}
+              />
+              <br />
+              <input
+                class="nameInput"
+                id=""
+                name="budget"
+                placeholder="Budget"
+                type="number"
+                value={formData.budget || ""}
+                required
+                onChange={handleChange}
+              />
             </div>
             <textarea
               class="messageInput"
-              placeholder="Write your thoughts here..."
-              id="" name="message" divs="5" value=
-              {formData.message}
+              placeholder="Summary of your project..."
+              id=""
+              name="message"
+              divs="5"
+              value={formData.message}
               onChange={handleChange}
               required
             ></textarea>
-            <br />
             <div>
-              <div lg="12" className="form-group">
+              <div className="form-group">
                 <button className="btn ac_btn" type="submit">
                   {formData.loading ? "Sending..." : "Send"}
                 </button>
@@ -161,8 +144,6 @@ const Contact = (props) => {
         </div>
       </div>
     </div>
-    // <div className={formData.loading ? "loading-bar" : "d-none"}></div>
-    // </HelmetProvider>
   );
 };
 
