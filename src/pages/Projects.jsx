@@ -27,40 +27,44 @@ const Projects = () => {
   // Define function to return JSX needed upon data retrieval
 
   const projectGrid = ProjectsData.map((project) => (
-    <div className="item">
-      <h1 className="projName">{project.name}</h1>
-      <img
-        onClick={() => openModal(project.live)}
-        className="projectPics"
-        src={project.image}
-        alt={project.name}
-      />
-      <br />
-      <p className="description">{project.description}</p>
-      <p className="description">
-        <span className="techUsed">Tech Used:</span> {project.tech}
-      </p>
-      <a target="_blank" rel="noreferrer" href={project.git}>
+    <div className="projectCard">
+      <div className="bg-white rounded-xl">
         <img
-          className="icons"
-          src="/images/githubLogoMini.png"
-          alt="GitHub Link"
-        ></img>
-      </a>
-      <a target="_blank" rel="noreferrer" href={project.live}>
-        <img
-          className="icons"
-          src="/images/webLogo.png"
-          alt="Live Site Link"
-        ></img>
-      </a>
+          onClick={() => openModal(project.live)}
+          className="projectPics"
+          src={project.image}
+          alt={project.name}
+        />
+        <h5 className="mb-0 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+          {project.name}
+        </h5>
+        <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
+          {project.description}
+        </p>
+        <div className="bioLinks">
+          <a target="_blank" rel="noreferrer" href={project.git}>
+            <img
+              className="icons"
+              src="/images/githubLogoMini.png"
+              alt="GitHub Link"
+            ></img>
+          </a>
+          <a target="_blank" rel="noreferrer" href={project.live}>
+            <img
+              className="icons"
+              src="/images/webLogo.png"
+              alt="Live Site Link"
+            ></img>
+          </a>
+        </div>
+      </div>
     </div>
   ));
 
   return (
-    <div className="projects">
+    <div className="about">
       <h1 className="projTitle">PROJECTS</h1>
-      <div className="container" id="container">
+      <div className="memContainer">
         {projectGrid}
         <Modal
           isOpen={modalIsOpen}
