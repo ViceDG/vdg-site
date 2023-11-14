@@ -94,7 +94,7 @@ header {
   display: flex;
   justify-content: space-between;
   padding: 0px;
-  width: 100vw;
+  width: 80vw;
   margin: auto;
 }
 
@@ -416,6 +416,7 @@ header {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  padding-top: 20px;
   justify-content: space-evenly;
   width: 90%;
 }
@@ -716,6 +717,14 @@ footer {
     padding-top: 5%;
   }
 
+  .projTitle {
+    font-size: 1.4rem;
+    font-weight: bolder;
+    text-shadow: none;
+    margin: 20px auto 0px auto;
+    font-family: "sui_generis";
+  }
+
   .main-logo {
     margin-top: 0;
     width: 50vw;
@@ -808,6 +817,7 @@ footer {
   .nav {
     padding: 0px;
     padding-top: 8px;
+    width: 100vw
   }
 
   .right {
