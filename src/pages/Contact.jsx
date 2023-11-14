@@ -71,9 +71,10 @@ const Contact = (props) => {
   return (
     <div className="contact">
       <div className="about">
-        <div className="mb-5 mt-3 pt-md-3">
+        <div className="mb-5 pt-md-3">
           <h1 className="projTitle">CONTACT US</h1>
         </div>
+        <div className="mr-3 ml-3">
         <p>{contactConfig.description}</p>
         <br />
         <p>
@@ -86,6 +87,7 @@ const Contact = (props) => {
           <br />
           <strong>Or:</strong> Fill out the contact form below!
         </p>
+        </div>
         <div className="contactFormContainer">
           <form onSubmit={handleSubmit} className="">
             <div className="formFields">
