@@ -41,7 +41,6 @@ const Contact = (props) => {
       )
       .then(
         (result) => {
-          console.log(result.text);
           setFormdata({
             loading: false,
             alertmessage: "SUCCESS! Looking forward to reading your email.",
@@ -50,7 +49,6 @@ const Contact = (props) => {
           });
         },
         (error) => {
-          console.log(error.text);
           setFormdata({
             alertmessage: `Failed to send!,${error.text}`,
             variant: "danger",
@@ -75,18 +73,18 @@ const Contact = (props) => {
           <h1 className="projTitle">CONTACT US</h1>
         </div>
         <div className="mr-3 ml-3">
-        <p>{contactConfig.description}</p>
-        <br />
-        <p>
-          <strong>Email us at:</strong>{" "}
-          <a href={`mailto:${contactConfig.USER_EMAIL}`}>
-            {contactConfig.USER_EMAIL}
-          </a>
-        </p>
-        <p>
+          <p>{contactConfig.description}</p>
           <br />
-          <strong>Or:</strong> Fill out the contact form below!
-        </p>
+          <p>
+            <strong>Email us at:</strong>{" "}
+            <a href={`mailto:${contactConfig.USER_EMAIL}`}>
+              {contactConfig.USER_EMAIL}
+            </a>
+          </p>
+          <p>
+            <br />
+            <strong>Or:</strong> Fill out the contact form below!
+          </p>
         </div>
         <div className="contactFormContainer">
           <form onSubmit={handleSubmit} className="">
@@ -136,7 +134,17 @@ const Contact = (props) => {
             ></textarea>
             <div>
               <div className="form-group">
-                <button className="startButton" type="submit">
+                <button
+                  className={
+                    formData.name && formData.email && formData.message
+                      ? "startButton"
+                      : "disabledButton"
+                  }
+                  type="submit"
+                  disabled={
+                    !formData.name || !formData.email || !formData.message
+                  }
+                >
                   {formData.loading ? "Sending..." : "Send"}
                 </button>
               </div>
