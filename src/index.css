@@ -30,11 +30,82 @@ header {
   margin-top: 5vh;
 }
 
-.startButton {
+/* .startButton {
   background-color: #18161600;
   padding: 10px 20px;
   font-family: "sui_generis";
   border: solid;
+} */
+
+/* CSS */
+.startButton {
+  padding: 0.6em 2em;
+  border: none;
+  outline: none;
+  color: rgb(255, 255, 255);
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 5px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.startButton:hover {
+  transform: scale(1.1);
+  transition: all 200ms;
+}
+
+.startButton:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ffffff,
+    #846983,
+    #875a85,
+    #7c467b,
+    #8f2c8b,
+    #d415cd,
+    #fe02f6
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing-startButton 20s linear infinite;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 5px;
+}
+
+@keyframes glowing-startButton {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 800% 0;
+  }
+}
+
+.startButton:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #222;
+  left: 0;
+  top: 0;
+  border-radius: 5px;
 }
 
 .memberTitle {
@@ -562,7 +633,6 @@ header {
 }
 
 .contact {
-  padding-bottom: 30px;
   -webkit-animation: fadein 2s;
   -moz-animation: fadein 2s;
   -ms-animation: fadein 2s;
@@ -582,6 +652,8 @@ select:focus {
   border-bottom: white solid;
   background: none;
   color: whitesmoke !important;
+  margin-left: 5px;
+  margin-right: 5px;
 }
 
 .contactFormContainer input::placeholder {
@@ -589,6 +661,7 @@ select:focus {
   border: none;
   background: none;
   color: whitesmoke !important;
+  text-align: center;
 }
 
 .contactFormContainer textarea {
@@ -652,7 +725,7 @@ select:focus {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .contactTitle {
