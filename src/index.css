@@ -10,6 +10,7 @@ body {
   font-family: "sui_generis";
   src: url(../public/font/sui_generis_rg-webfont.woff2);
 }
+
 header {
   padding-top: 1px;
   padding-bottom: 1px;
@@ -34,8 +35,9 @@ header {
   padding: 0.6em 2em;
   border: none;
   outline: none;
-  color: rgb(255, 255, 255);
-  background: #767676;
+  font-family: "sui_generis";
+  color: rgb(255, 255, 255, 0.25);
+  background: rgba(130, 130, 130, 0.25);
   cursor: not-allowed;
   position: relative;
   z-index: 0;
@@ -49,6 +51,7 @@ header {
   padding: 0.6em 2em;
   border: none;
   outline: none;
+  font-family: "sui_generis";
   color: rgb(255, 255, 255);
   background: #111;
   cursor: pointer;
@@ -145,18 +148,6 @@ header {
 .members {
   height: 100vh;
   width: 100%;
-}
-
-.contactSvgs {
-  display: flex;
-  flex-direction: column;
-  margin: auto;
-  width: 8vw;
-  height: 20vh;
-  justify-content: space-evenly;
-  bottom: 35vh;
-  right: 90vw;
-  position: absolute;
 }
 
 .mainContent p {
@@ -383,18 +374,6 @@ header {
     0 0 50px #9200e6;
 }
 
-.name {
-  font-size: 6vw;
-  font-weight: bolder;
-  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 10px #e6007389,
-    0 0 12px #ad00e689, 0 0 10px #9200e67e;
-  width: 60vw;
-  display: flex;
-  flex-direction: column;
-  margin: auto;
-  font-family: "sui_generis";
-}
-
 .bio {
   width: 60%;
   font-size: 1.1em;
@@ -522,11 +501,6 @@ header {
   border-radius: 25px;
   margin-bottom: 20px;
 }
-
-/* .projectPics:hover {
-  transform: scale(1.1);
-  transition: all 200ms;
-} */
 
 .description {
   width: 35vw;
@@ -691,7 +665,7 @@ select:focus {
 .contactFormContainer textarea:focus {
   outline: none;
   box-shadow: none;
-  border-bottom: #f83c68 solid;
+  border-bottom: #595959 solid;
   transition: 0.3s;
   outline-color: transparent;
   color: white !important;
@@ -707,18 +681,10 @@ select:focus {
 .contactFormContainer {
   display: flex;
   background: rgb(49, 48, 61, 0);
-  /* background: linear-gradient(
-    347deg,
-    rgb(49, 48, 61) 31%,
-    rgba(0, 0, 0, 0.845) 100%
-  ); */
   border-radius: 21px 31px 17px 19px;
   -webkit-border-radius: 21px 31px 17px 19px;
   -moz-border-radius: 21px 31px 17px 19px;
   background-size: cover;
-  /* box-shadow: 0px 10px 56px -6px rgba(0, 0, 0, 0.84);
-  -webkit-box-shadow: 0px 10px 56px -6px rgba(0, 0, 0, 0.84);
-  -moz-box-shadow: 0px 10px 56px -6px rgba(0, 0, 0, 0.84); */
   width: 60vw;
   height: 100%;
   padding: 20px;
@@ -732,16 +698,6 @@ select:focus {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-}
-
-.contactTitle {
-  color: white;
-  font-size: 8vw;
-  padding: 0;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #ad00e6,
-    0 0 50px #9200e6;
 }
 
 .conLogo {
@@ -865,7 +821,7 @@ footer {
   }
 
   .projectCard {
-    width: 75vw
+    width: 75vw;
   }
 
   .ReactModal__Content {
@@ -897,7 +853,7 @@ footer {
   .nav {
     padding: 0px;
     padding-top: 8px;
-    width: 100vw
+    width: 100vw;
   }
 
   .right {
