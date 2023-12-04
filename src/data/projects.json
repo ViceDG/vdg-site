@@ -8,6 +8,14 @@
     "tech": "React.js, Node.js, Mongoose, MongoDB, Express.js, Google Firebase, JavaScript, HTML, CSS"
   },
   {
+    "name": "StopJockin",
+    "live": "https://stopjockin.netlify.app/",
+    "git": "https://github.com/tetonkaa/StopJockinV2",
+    "image": "/images/stopJockinSS.png",
+    "description": "Stop Jockin is a platform for New Orleans local business owner , 'Joc' , used to display many of his business ventures! This app utilizes a React front-end framework, connected to a backend API that allows admin users to manage rendered data.",
+    "tech": "React.js, Node.js, Mongoose, MongoDB, Express.js, JavaScript, HTML, CSS"
+  },
+  {
     "name": "Collarchive",
     "live": "https://collarchive-production.up.railway.app/",
     "git": "https://github.com/badjab326/collarchive",
