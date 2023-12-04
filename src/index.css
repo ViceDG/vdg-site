@@ -72,13 +72,13 @@ header {
   content: "";
   background: linear-gradient(
     45deg,
-    #ffffff,
-    #846983,
+    #83F1EF,
+    #23C7FD,
     #875a85,
     #7c467b,
-    #8f2c8b,
-    #d415cd,
-    #fe02f6
+    #8b5071,
+    #bf6f9b,
+    #FD96CF
   );
   position: absolute;
   top: -2px;
@@ -440,7 +440,7 @@ header {
   font-size: 6vw;
   font-weight: bolder;
   text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 10px #e6007389,
-    0 0 12px #ad00e689, 0 0 10px #9200e67e;
+    0 0 12px #ad00e689, 0 0 10px #7a4b4f;
   margin: 20px auto 0px auto;
   font-family: "sui_generis";
 }
