@@ -93,7 +93,7 @@ const Contact = (props) => {
                 className="nameInput"
                 id=""
                 name="name"
-                placeholder="Name"
+                placeholder="Name *"
                 value={formData.name || ""}
                 type="text"
                 required
@@ -104,7 +104,7 @@ const Contact = (props) => {
                 className="emailInput"
                 id=""
                 name="email"
-                placeholder="Email"
+                placeholder="Email *"
                 type="email"
                 value={formData.email || ""}
                 required
@@ -124,7 +124,7 @@ const Contact = (props) => {
             </div>
             <textarea
               className="messageInput"
-              placeholder="Summary of your project..."
+              placeholder="Summary of your project... *"
               id=""
               name="message"
               divs="5"
