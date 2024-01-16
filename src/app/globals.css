@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+.primaryBG {
+  background-color: hsl(236, 51%, 11%);
+}
+
+.redFont {
+  color: rgb(228, 23, 23);
+}
+
+.secondaryBG {
+  background-color: #000928c5;
+}
+
+.projectTitle {
+  font-size: 3.5em;
+  box-shadow: inset 0 0 0 0 #ffffff;
+  transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  color: #ffffff00;
+}
+
+.projectTitle:hover {
+  box-shadow: inset 100vw 0 0 0 #ffffff;
+  color: rgb(0, 0, 0);
+}
+
+@keyframes projectsBG {
+  0% {
+    background-color: hsl(86, 50%, 11%);
+    background-size: 95px 95px;
+    background-image: radial-gradient(#70707081 2px, transparent 2px),
+      radial-gradient(#ffffffc0 1px, hsl(236, 51%, 11%) 1px);
+    background-position: 0 0, 40px 40px;
+  }
+  50% {
+    background-size: 100px 100px;
+  }
+  100% {
+    background-size: 95px 95px;
+  }
+}
+
+.thirdBG {
+  background-color: hsl(86, 50%, 11%);
+  opacity: 1;
+  background-image: radial-gradient(#70707081 2px, transparent 2px),
+    radial-gradient(#ffffffc0 1px, hsl(236, 51%, 11%) 1px);
+  background-size: 100px 100px;
+  background-position: 0 0, 40px 40px;
+  animation: projectsBG 20s ease-in-out infinite;
+}
+
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100vw;
+  min-height: 100vh;
+  z-index: -100;
+  filter: brightness(50%);
+}
+
+.bioText {
+  overflow-y: scroll;
+}
