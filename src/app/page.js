@@ -191,7 +191,7 @@ export default function Home() {
               </Link>
               <Link href="https://stopjockin.com" className="relative block">
                 <h1 className="absolute inset-0 flex items-center justify-center text-white projectTitle z-10">
-                  stopjockin
+                  StopJockin
                 </h1>
                 <img
                   alt="Project 2"
