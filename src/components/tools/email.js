@@ -84,20 +84,23 @@ const Contact = (props) => {
           <Input
             placeholder="Your Name"
             required
+            name="name"
             type="text"
-            value={formData.name || ""}
+            value={formData.name}
             onChange={handleChange}
           />
           <Input
             placeholder="Your Email"
             required
+            name="email"
             type="email"
-            value={formData.email || ""}
+            value={formData.email}
             onChange={handleChange}
           />
           <Textarea
             placeholder="Summary of your project..."
             required
+            name="message"
             value={formData.message}
             onChange={handleChange}
           />
